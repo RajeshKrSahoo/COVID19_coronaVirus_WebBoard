@@ -1,0 +1,101 @@
+
+    table {
+        border: 3.5px solid black;
+
+        border-collapse: collapse;
+
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        border: 3.5px solid black;
+
+        border-collapse: collapse;
+    }
+
+    tr:hover {
+        background-color: #ffff99;
+    }
+
+
+    /* Style the body */
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
+
+    /* Header/Logo Title */
+    .header {
+        padding: 60px;
+        text-align: center;
+        background: #39bc1a;
+        color: white;
+        font-size: 30px;
+    }
+
+    /* Page Content */
+    /*.content {padding:20px;} */
+
+    .thead-dark {
+        color: #fff;
+        background-color: #212529;
+        border-color: #32383e;
+    }
+
+    .pageCenter {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+        float: none;
+
+    }
+
+    .blinking {
+        animation: blinkingText 1.2s infinite;
+    }
+
+    @keyframes blinkingText {
+        0% {
+            color: #f20c07;
+        }
+
+        49% {
+            color: #a94442;
+        }
+
+        60% {
+            color: transparent;
+        }
+
+        99% {
+            color: transparent;
+        }
+
+        100% {
+            color: #f20c07;
+        }
+    }
+
+    a:hover {
+        background-color: yellow;
+      }
+
+    /* .btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      
+      /* Style the active class, and buttons on mouse-over */
+      /* .active, .btn:hover {
+        background-color: #666;
+        color: white;
+      } */ 
+
+
