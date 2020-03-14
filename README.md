@@ -1,2 +1,17 @@
 # COVID19_coronaVirus_WebBoard
-Web page showing realtime Corona Virus outbreaks wolrdwide using Falsk and Jinja2 Templates
+Web page showing realtime Corona Virus outbreaks wolrdwide using Flask and Jinja2 Templates, By providing the exact number of fatalities.
+
+
+This same app has been hosted in pythonanywhere.com for public notice: http://muxtrap.pythonanywhere.com/
+
+## Below is the images how the webpage works:
+
+<img width="1657" alt="Screenshot 2020-03-13 at 9 34 09 PM" src="https://user-images.githubusercontent.com/27301175/76678837-45301180-6601-11ea-93a7-5c9c3c609941.png">
+
+
+### For Searching particular country wise:
+
+<img width="1657" alt="Screenshot 2020-03-14 at 2 33 06 PM" src="https://user-images.githubusercontent.com/27301175/76678852-63960d00-6601-11ea-841a-49bc170aed92.png">
+
+
+
