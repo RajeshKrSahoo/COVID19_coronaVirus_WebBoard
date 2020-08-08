@@ -15,3 +15,8 @@ This same app has been hosted in pythonanywhere.com for public notice: http://mu
 
 
 
+Added Features new! :) 
+
+<img width="1669" alt="Screenshot 2020-08-08 at 2 43 36 PM" src="https://user-images.githubusercontent.com/27301175/89706711-d5426f00-d985-11ea-8294-014c5bbf1545.png">
+
+
