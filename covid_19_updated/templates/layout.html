@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <!-- <style>
+
+    </style> -->
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>COVID-19 
+            <!-- <marquee behavior="alternate"> -->
+                <!-- <img src="https://media.giphy.com/media/dVuyBgq2z5gVBkFtDc/giphy.gif" width="150" height="108" alt="Cup of coffee on saucer"></marquee> -->
+                </h1>
+        <p><span class="blinking">Realtime data for Corona Virus Outbreak</span></p>
+        
+            
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://srirajeshsahoo.wordpress.com/">Rajesh Sahoo</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/graph">Home</a></li>
+                <li><a href="https://srirajeshsahoo.wordpress.com/About/">About</a></li>
+                <li><a href="/corona">Corona Global</a></li>
+                <li><a href="/corona/ind/state">Indian COVID Info</a></li>
+                <li><a href="/corona/ind/dist">Districts</a></li>
+            </ul>
+            {% block searchPage %}
+            {% endblock %}
+            
+            
+        </div>
+        
+
+    </nav>
+    
+
+    <div class="pageCenter">
+            
+        {% block info %}
+        {% endblock %}
+        
+    </div>
+    
+
+</div>
+
+<!-- <div id="footer"><p>dekh bhi</p></div>
+<div class="fixed-footer">
+        <div class="container">Copyright &copy; 2020 by Rajesh</div>        
+    </div> -->
+<!-- <div> -->
+    <footer class="footer">
+            <div class="copyright-content">
+                          Website Contents are from certified sources <strong>mohfw.gov.in and WHO</strong><br>
+                      <span>Designed, Developed and Hosted by  <a href="https://github.com/rajeshkrsahoo" title="Rajesh Sahoo" target="_blank" rel="noopener noreferrer"><strong>Rajesh Sahoo</strong></a> </span> 
+                      </div>
+          </footer>
+<!-- </div> -->
+</body>
+
+</html>

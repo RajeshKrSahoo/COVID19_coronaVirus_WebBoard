@@ -1,0 +1,73 @@
+<!-- {% extends "layout.html" %}
+
+{% block searchPage %}
+<form class="navbar-form navbar-left" method="GET" action="{{ url_for('search_val') }}" >
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search" name="search">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block info %}
+
+<h2>{{ title|safe }}</h2>
+{{ posts|safe }}
+<img src="data:image/png;base64,{{ posts }}" width="500"> -->
+
+<!-- {% endblock %} -->
+ <!-- --> 
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    {{ result[0]|safe }}
+</head>
+<body>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js"]
+  }
+});
+</script>
+<script type="text/javascript" src=
+"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+This web page visualizes the function \(
+u(t) = Ae^{-bt}\sin (w t), \hbox{ for } t\in [0,T]
+\).
+
+<form method=post action="">
+<table>
+  <!-- {% for field in form %}
+    <tr>
+    <td class="name">\( {{ field.name }} \) &nbsp;&nbsp;</td>
+    <td>{{ field(size=12) }}</td>
+    <td>{{ field.label }}</td>
+    {% if field.errors %}
+      <td><ul class=errors>
+      {% for error in field.errors %}
+        <li><font color="red">{{ error }}</font></li>
+      {% endfor %}</ul></td>
+    {% endif %}
+    </tr> -->
+  <!-- {% endfor %} -->
+</table>
+<p><input type="submit" value="Compute"></form></p>
+
+<p>
+{% if result != None %}
+<!-- script and div elements for Bokeh plot -->
+{{ result[1]|safe }}
+{{ result[2]|safe }}
+{% endif %}
+</p>
+</body>
+</html>
