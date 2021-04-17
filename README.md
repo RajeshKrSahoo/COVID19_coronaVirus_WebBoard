@@ -6,7 +6,9 @@ This same app has been hosted in pythonanywhere.com for public notice: http://mu
 
 ## Below is the images how the webpage works:
 
-<img width="1657" alt="Screenshot 2020-03-13 at 9 34 09 PM" src="https://user-images.githubusercontent.com/27301175/76678837-45301180-6601-11ea-93a7-5c9c3c609941.png">
+
+
+<img width="1569" alt="Screenshot 2021-04-17 at 3 00 59 PM" src="https://user-images.githubusercontent.com/27301175/115108411-f1bf8e00-9f8d-11eb-96d8-9ced6a0dc9d5.png">
 
 
 ### For Searching particular country wise:
