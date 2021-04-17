@@ -1,0 +1,214 @@
+
+    table {
+        /* overflow-y:scroll;  */
+        height:100px; 
+        /* display:block;  */
+        border: 3.5px solid black;
+
+        border-collapse: collapse;
+
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        border: 3.5px solid black;
+
+        border-collapse: collapse;
+    }
+
+    tr:hover {
+        background-color: #ffff99;
+    }
+
+
+    /* Style the body */
+    body {
+        
+        font-family: Arial;
+        margin: 0;
+        
+    }
+    
+    /* footer {
+        position:fixed; 
+        bottom:0; 
+        left:40%;
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: red;
+      } */
+
+      
+
+    
+
+    /* Header/Logo Title */
+    .header {
+        padding: 60px;
+        text-align: center;
+        background: #39bc1a;
+        color: white;
+        font-size: 30px;
+    }
+
+    /* Page Content */
+    /*.content {padding:20px;} */
+
+    .thead-dark {
+        color: #fff;
+        background-color: #212529;
+        border-color: #32383e;
+    }
+
+    .pageCenter {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+        float: none;
+
+    }
+    .footer {
+        margin-top: 40px;
+        background: url(../images/footer-bottom-bg.png)0 0 repeat;
+        text-shadow: 0 0 14px black;
+        color: #337ab7;
+        background-color: #0e0b0b;
+        /* box-shadow: 0 0 10px 16px black; */
+
+    }
+    .copyright-content {
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+    }
+   
+
+    .blinking {
+        animation: blinkingText 1.2s infinite;
+    }
+
+    @keyframes blinkingText {
+        0% {
+            color: #f20c07;
+        }
+
+        49% {
+            color: #a94442;
+        }
+
+        60% {
+            color: transparent;
+        }
+
+        99% {
+            color: transparent;
+        }
+
+        100% {
+            color: #f20c07;
+        }
+    }
+
+    a:hover {
+        background-color: yellow;
+      }
+      .active, .container-fluid li:hover
+
+      {
+        background: #2bab0d;
+        border-radius: 1px;
+
+      }
+
+      .submenu-1
+      {
+          display: none
+      }
+
+      .container-fluid li:hover .submenu-1
+      {
+          display: block;
+          position: absolute;
+          background: rgb(0,100, 0);
+          margin-top: 0px;
+          margin: left;
+      }
+
+      .container-fluid li:hover .submenu-1 ul
+      {
+        display: block;
+        margin: 5px;
+      }
+
+      .container-fluid li:hover .submenu-1 ul li
+      {
+          width: 150px;
+          padding: 10px;
+          border-bottom: 1px lightcyan;
+          background: transparent;
+          border-radius: 0;
+          text-align: left;
+      }
+      .container-fluid li:hover .submenu-1 ul li:last-child
+      {
+        border-bottom: none 
+      }
+
+      .container-fluid li:hover .submenu-1 ul li a:hover
+      {
+          color: #b2ff0b00;
+          
+      }
+
+    /* .btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      
+      /* Style the active class, and buttons on mouse-over */
+      /* .active, .btn:hover {
+        background-color: #666;
+        color: white;
+      } */ 
+
+      /* .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: red;
+        padding: 12px 30px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      
+      /* Darker background on mouse-over */
+      /* .btn:hover {
+        background-color: RoyalBlue;
+      } */
+      /* 
+      .fixed-header, .fixed-footer{
+        /* width: 100%; */
+        /* position: fixed;        
+        /* background: rgb(240, 20, 20); */
+        /* padding: 80px 0; */
+        /* color: #fff; */ 
+    /* } */ 
+    /* .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    /* }  */
+    /* */
+
