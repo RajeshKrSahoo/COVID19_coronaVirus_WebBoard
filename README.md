@@ -20,3 +20,7 @@ Added Features new! :)
 <img width="1669" alt="Screenshot 2020-08-08 at 2 43 36 PM" src="https://user-images.githubusercontent.com/27301175/89706711-d5426f00-d985-11ea-8294-014c5bbf1545.png">
 
 
+1) We can use the latest code from this folder: **covid_19_lat_2ndwave2021**
+2) Added Data from John Hokins University directly!
+3) New features like dashboard is in progress which wll be available soon!
+
