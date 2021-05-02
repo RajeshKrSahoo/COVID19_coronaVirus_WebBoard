@@ -4,6 +4,10 @@ Web page showing realtime Corona Virus outbreaks wolrdwide using Flask and Jinja
 
 This same app has been hosted in pythonanywhere.com for public notice: http://muxtrap.pythonanywhere.com/
 
+
+## Note:: 
+  Have added field for Vaccination Slot availability from which we can check check the nearest vaccination centers slots available which is currently a headache to search !
+
 ## Below is the images how the webpage works:
 
 
