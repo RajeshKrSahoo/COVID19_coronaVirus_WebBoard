@@ -1,10 +1,10 @@
 ##****IMPORTANT****####
 
-##This is the ;astest code been used in http://muxtrap.pythonanywhere.com/ and also this is the latest codes!
+##This is the lastest code been used in http://muxtrap.pythonanywhere.com/ and also this is the latest codes!
 
 
 
-
+'''Below are the learning refernce articles i found'''
 # from werkzeug.wrappers import Request, Response # for running Flask on Jupyter Lab
 # https://hplgit.github.io/web4sciapps/doc/pub/._web4sa_flask013.html
 ## https://jakevdp.github.io/PythonDataScienceHandbook/04.01-simple-line-plots.html
@@ -19,6 +19,7 @@
 
 from flask import Flask, jsonify,redirect, request, render_template, url_for, Markup
 from coronaScrap import *
+from VaccineSlotCOVID import *
 # mpld3
 
 from multiprocessing import Value                    #This is Multithreading lib
@@ -166,6 +167,46 @@ def stateDis_Search():
     # posts=Markup(posts) # incase if we want to skil |safe in jinja2 template
 
     return render_template('districts.html', posts=posts, title = '<h3><b>{}</b> Districts COVID Info</h3>'.format(post_val))
+
+
+
+@app.route("/vaccineSlot",methods=['GET', 'POST'])
+def covidSlot():
+    if request.method == 'POST':
+        # req_data = request.get_json(force=True)
+        # data = request.form.to_dict(flat=False)
+        # a=jsonify(data)
+        data = request.get_json()
+        name_state =  request.form.get('state_name', '')
+        name_dist =  request.form.get('district_name', '')
+        # language=request.form('state_name')
+        # language = req_data['state_name']
+        print("Value StateName:",name_state)
+        print("Value distName:",name_dist)
+        # print("Value Dist Name:",district_name)
+        age=54
+        district_name=name_dist
+        state=name_state
+        html=vaccineSlotsByDist(age,district_name,state)
+        print("HTML>>>",html)
+
+        ##checking if the atframe has value
+        if html==None:
+            return render_template('vaccineSlot.html', posts="Data Not availble for the given Inputs please check!", title = '<h3><b>{}</b> </h3>'.format('NO Vaccine Slot Availability'))
+
+        else:
+            return render_template('vaccineSlot.html', posts=html, title = '<h3><b>{}</b> </h3>'.format('Vaccine Slot Availability'))
+        
+
+    else:
+
+        return render_template('vaccineSlot.html', posts="", title = '<h3><color="red"><b>{}</b> </h3>'.format('Enter Values to get the Vaccination slots availabilty Info'))
+
+
+
+
+
+
 
 @app.route("/graph")
 def graph_state():

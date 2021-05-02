@@ -341,7 +341,7 @@ def scrap_coronaData_glob():
 
 
         ###for the Whole data to show!
-        map_data_Whole=map_data
+        map_data_Whole=map_data.replace(np.nan,0)
 
         map_data_Whole['Active Cases']=map_data_Whole.apply(lambda row: row.Confirmed - row.Recovered- row.Deaths,  axis=1)
 
@@ -465,6 +465,8 @@ def highlight_vals(row, cols=['Confirmed_24hr', 'Deaths_24hr'], color='red'):
                 styles[b] = 'background-color: %s' % color
             else:
                 styles[b] = 'background-color: yellow'
+
+        
 
     except:
         pass
