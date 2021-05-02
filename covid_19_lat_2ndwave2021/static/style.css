@@ -114,7 +114,8 @@
     }
 
     a:hover {
-        background-color: yellow;
+         background-color: rgba(230, 233, 224, 0.721); 
+        /* font-weight: 900; */
       }
       .active, .container-fluid li:hover
 
@@ -126,14 +127,21 @@
 
       .submenu-1
       {
-          display: none
+          display: none;
+          
+      }
+
+      .submenu-1 li:hover
+      {
+        font-weight: 900;
       }
 
       .container-fluid li:hover .submenu-1
       {
           display: block;
           position: absolute;
-          background: rgb(0,100, 0);
+         
+          background: rgb(17, 2, 2);
           margin-top: 0px;
           margin: left;
       }
@@ -148,7 +156,7 @@
       {
           width: 150px;
           padding: 10px;
-          border-bottom: 1px lightcyan;
+          /* border-bottom: 1px lightcyan; */
           background: transparent;
           border-radius: 0;
           text-align: left;
@@ -160,7 +168,7 @@
 
       .container-fluid li:hover .submenu-1 ul li a:hover
       {
-          color: #b2ff0b00;
+          color: #10110d00;
           
       }
 
