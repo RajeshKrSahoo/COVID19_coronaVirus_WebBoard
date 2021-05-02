@@ -6,7 +6,7 @@ This same app has been hosted in pythonanywhere.com for public notice: http://mu
 
 
 ## Note:: 
-  Have added field for Vaccination Slot availability from which we can check check the nearest vaccination centers slots available which is currently a headache to search !
+  Have added field for Vaccination Slot availability from which we can check the nearest vaccination centers slots available which is currently a headache to search ! _Latest_code_: **covid_19_lat_2nwave2021**
 
 ## Below is the images how the webpage works:
 
