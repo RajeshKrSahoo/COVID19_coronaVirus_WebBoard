@@ -17,9 +17,15 @@
 ##https://www.bogotobogo.com/python/Flask/Python_Flask_Embedding_Machine_Learning_2.php
 #####
 
+# from flask import Flask, jsonify,redirect, request, render_template, url_for, Markup
+# from coronaScrap import *
+# from VaccineSlotCOVID import *
+
+
+import datetime
 from flask import Flask, jsonify,redirect, request, render_template, url_for, Markup
 from coronaScrap import *
-from VaccineSlotCOVID import *
+from VaccineSlotCOVID import vaccineSlotsByDist
 # mpld3
 
 from multiprocessing import Value                    #This is Multithreading lib
@@ -170,21 +176,42 @@ def stateDis_Search():
 
 
 
-@app.route("/vaccineSlot",methods=['GET', 'POST'])
+
+@app.route("/vaccineSlot",methods=['POST'])
 def covidSlot():
     if request.method == 'POST':
         # req_data = request.get_json(force=True)
         # data = request.form.to_dict(flat=False)
         # a=jsonify(data)
+
+        ##---Used for browser leverl entry an getting the value
         data = request.get_json()
         name_state =  request.form.get('state_name', '')
         name_dist =  request.form.get('district_name', '')
-        # language=request.form('state_name')
-        # language = req_data['state_name']
+        age_name =  request.form.get('age', '')
+
+
+###*********************************************************************************************
+        ##use for POSTMAN level code testing as upper line coes does not yeiel any value
+        # data=request.json
+        # print(data)
+
+        # name_state =  data['state_name']
+        # name_dist =  data['district_name']
+        # age_name =  data['age']
+###*********************************************************************************************
+
+
+
         print("Value StateName:",name_state)
         print("Value distName:",name_dist)
+        print("AGE: ",age_name)
         # print("Value Dist Name:",district_name)
-        age=54
+        # age=54
+        try:
+            age=int(age_name)
+        except Exception as e:
+            print(e)
         district_name=name_dist
         state=name_state
         html=vaccineSlotsByDist(age,district_name,state)
@@ -195,7 +222,7 @@ def covidSlot():
             return render_template('vaccineSlot.html', posts="Data Not availble for the given Inputs please check!", title = '<h3><b>{}</b> </h3>'.format('NO Vaccine Slot Availability'))
 
         else:
-            return render_template('vaccineSlot.html', posts=html, title = '<h3><b>{}</b> </h3>'.format('Vaccine Slot Availability'))
+            return render_template('vaccineSlot.html', posts=html, title = '<h3><b>{} {}</b> </h3>'.format('Vaccine Slot Availability for age: ',age))
         
 
     else:
@@ -296,8 +323,12 @@ def graph_state():
     # ax.plot(x, y)
     # html_text = mpld3.fig_to_html(fig)
 
+    vacc_tot=total_vaccination()
 
-    return render_template('graph.html', posts="nothing", title = '<h3>videos</h3>')
+    body='<h3> <font color="Green">{}% </font></h3> <h4> <font color="black">of India till Date:{} </font></h3> <br><br><br> '.format(vacc_tot,datetime.now())
+
+
+    return render_template('graph.html', posts=body, title = '<h3>videos</h3>')
 
     
 

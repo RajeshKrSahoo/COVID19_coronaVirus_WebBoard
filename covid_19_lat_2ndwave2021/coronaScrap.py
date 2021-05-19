@@ -503,3 +503,35 @@ def covid_info(country=None):
 
     except Exception as e:
         print(e)
+
+
+
+def total_vaccination():
+    try:
+        try:
+            r_state = requests.get('https://www.mohfw.gov.in/')#,verify=False)# headers=header, timeout=10)
+        except:
+            return None
+        #### ------Using webscrapping method to scrap data ---------###
+        soup = bs(r_state.text, 'html.parser')
+        # table =soup.find('div', id="cases")##.get_text()
+        table =soup.find('div',attrs={'class':'fullbol'})
+        print(type(table))
+        table
+
+        # soup.select_one("span[title*=RAM]").text
+        ae=table.find("span", {"class": "coviddata"}).text.strip()
+        # ae=table.findAll('span')
+        ae
+        val = ae.split (",")
+        print("total vaccinated: ")
+        vacc_pop=int(''.join(val))
+
+        total_pop=1391575756
+
+        total_vacc_perc=(vacc_pop/total_pop)*100
+        print(total_vacc_perc,"% of India till Date:",datetime.now())
+        return total_vacc_perc
+
+    except Exception as e:
+        print("Exception in total_vaccination",e)
